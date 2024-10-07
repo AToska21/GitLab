@@ -69,8 +69,8 @@ gem install gitlab-license
 Clone this project to your local machine.
 
 ```bash
-git clone https://github.com/Lakr233/GitLab-License-Generator.git
-cd GitLab-License-Generator
+git clone https://github.com/ivanshvedko/GitLab.git
+cd GitLab
 ```
 
 #### 2. Run the `make.sh` script
@@ -152,4 +152,4 @@ If you want to disable GitLab’s usage data collection (Service Ping), modify G
 
 This project is licensed under the **WTFPL License**.
 
-Copyright (c) 2023, Tim Cook, All Rights Not Reserved.
+Copyright (c) 2023, All Rights Not Reserved.
