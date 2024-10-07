@@ -74,20 +74,20 @@ license = Gitlab::License.new
 
 # don't use gitlab inc, search `gl_team_license` in lib for details
 license.licensee = {
-  "Name"    => "Tim Cook",
-  "Company" => "Apple Computer, Inc.",
-  "Email"   => "tcook@apple.com"
+  "Name"    => "John Doe",
+  "Company" => "Company, Inc.",
+  "Email"   => "john.doe@company.com"
 }
 
 # required of course
-license.starts_at         = Date.new(1976, 4, 1)
+license.starts_at         = Date.new(2020, 1, 1)
 
 # required since gem gitlab-license v2.2.1
-license.expires_at        = Date.new(2500, 4, 1)
+license.expires_at        = Date.new(2099, 1, 1)
 
 # prevent gitlab crash at
 # notification_start_date = trial? ? expires_at - NOTIFICATION_DAYS_BEFORE_TRIAL_EXPIRY : block_changes_at
-license.block_changes_at  = Date.new(2500, 4, 1)
+license.block_changes_at  = Date.new(2099, 1, 1)
 
 # required
 license.restrictions      = {
@@ -96,7 +96,7 @@ license.restrictions      = {
   # PREMIUM_PLAN = 'premium'
   # ULTIMATE_PLAN = 'ultimate'
 
-  active_user_count: 2147483647,
+  active_user_count: 500,
   # required, just dont overflow
 }
 
@@ -105,7 +105,7 @@ license.restrictions      = {
 # so here by we inject all features into restrictions
 # see scan.rb for a list of features that we are going to inject
 for feature in FEATURE_LIST
-  license.restrictions[feature] = 2147483647
+  license.restrictions[feature] = 500
 end
 
 puts "[*] validating license..."
